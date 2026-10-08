@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+
+    <title>Transporte Agua Verde</title>
+
+    <link rel="stylesheet"
+    href="style.css">
+
+  
+
+</head>
+
+<body> 
+
+    
+
+<header>
+
+    <h1>  🚍 TRANSPORTE AGUA VERDE 🚍 </h1>
+    
+
+    <p>AGUA VERDE ↔ ROSARIO</p>
+
+    <div id="reloj"></div>
+
+    <button 
+        id="boton-sentido"
+        class="boton-sentido">
+        AGUA VERDE → ROSARIO
+    </button>
+
+</header>
+
+<main>
+
+     <section class="mensaje-dia">
+
+        <h2> MENSAJE DEL DÍA</h2>
+
+        <div id="mensaje-biblico"></div>
+
+    </section>
+
+    <section class="proximo">
+
+        <h2>¿QUIÉN SIGUE?</h2>
+
+        <div id="proximo-turno"></div>
+
+
+    </section>
+
+    
+    <section class="siguientes">
+
+            <h2>PRÓXIMAS SALIDAS</h2>
+
+            <div id="lista-turnos"></div>
+
+
+            <button
+                id="boton-horarios"
+                class="boton-horarios">
+                VER TODOS LOS HORARIOS
+            </button>
+
+            <div id="todos-los-horarios"
+                class="todos-los-horarios oculto">
+
+                <h3>Horarios Del Día</h3>
+
+                <div id="lista-completa"></div>
+            
+        
+            </div>
+     
+    </section>
+
+    <!-- PARADAS PRINCIPALES -->
+
+<section class="paradas-principales">
+
+    
+
+    <button
+        id="boton-paradas"
+        class="boton-paradas"
+    >
+        VER PARADAS PRINCIPALES
+    </button>
+
+
+    <!-- LISTA DE PARADAS -->
+
+    <div
+        id="lista-paradas"
+        class="lista-paradas oculto"
+    >
+
+        <!-- INICIO AGUA VERDE -->
+
+        <div class="parada">
+
+            <h3>🏠 Agua Verde</h3>
+
+            <p>
+                📍 Calle: C. 20 de Noviembre
+            </p>
+
+            <p>
+                📝 Referencia:
+                Junto al Bar Tecate Olimpica
+            </p>
+
+        </div>
+
+
+        <!-- CALLE DE LOS AUTOBUSES -->
+
+        <div class="parada">
+
+            <h3>🚌 Calle de los Autobuses</h3>
+
+            <p>
+                📍 Calle: C. José López Portillo
+            </p>
+
+            <p>
+                📝 Referencia:
+                Junto a El Panteón Español
+            </p>
+
+        </div>
+
+
+        <!-- LOS ARCOS -->
+
+        <div class="parada">
+
+            <h3>🏹 Los Arcos</h3>
+
+            <p>
+                📍 Calle: Luis Donaldo Colosio Murrieta
+            </p>
+
+            <p>
+                📝 Referencia:
+                Frente a Autotransportes Unidos de Sinaloa (AUS) 
+            </p>
+
+        </div>
+
+
+        <!-- IMSS -->
+
+        <div class="parada">
+
+            <h3>🏥 IMSS</h3>
+
+            <p>
+                📍 Calle: Perez Arce
+            </p>
+
+            <p>
+                📝 Referencia:
+                IMSS de Rosario
+            </p>
+
+        </div>
+
+
+        <!-- PLAZUELA -->
+
+        <div class="parada">
+
+            <h3>⛲ Plazuela Gabriel Leyva</h3>
+
+            <p>
+                📍 Calle: Angel Flores
+            </p>
+
+            <p>
+                📝 Referencia:
+                Frente al Palacio Municipal
+            </p>
+
+        </div>
+
+
+        <!-- SUPERAMIGO -->
+
+        <div class="parada">
+
+            <h3>⭐ SuperAmigo</h3>
+
+            <p>
+                📍 Calle: C. Teófilo Norís
+            </p>
+
+            <p>
+                📝 Referencia:
+                Frente a la Coppel
+            </p>
+
+            <strong>
+                ⭐ Una de las paradas con mayor movimiento
+            </strong>
+
+        </div>
+
+
+        <!-- OTRA PARADA -->
+
+        <div class="parada">
+
+            <h3>📍 Parada: La Chalata</h3>
+
+            <p>
+                📍 Calle: C. Mineros
+            </p>
+
+            <p>
+                📝 Referencia:
+                Frente a Productos Secos al Mayoreo "Emanuel"
+            </p>
+
+        </div>
+
+
+        <!-- OXXO -->
+
+        <div class="parada">
+
+            <h3>🏪 OXXO</h3>
+
+            <p>
+                📍 Calle: Agustín Lara
+            </p>
+
+            <p>
+                📝 Referencia:
+                Frente al Oxxo
+            </p>
+
+            <strong>
+                🕐 Aquí espera más tiempo el último camión
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <section class="transporte-externo">
+
+            <h2>TRANSPORTE DE LOS POZOS</h2>
+
+            <div id="transporte-externo"></div>
+
+        </section>
+   
+
+    <section class="promocion">
+
+        <div class="linea-promocion linea-1"></div>
+        <div class="linea-promocion linea-2"></div>
+        <div class="linea-promocion linea-3"></div>
+        <div class="linea-promocion linea-4"></div>
+
+        <div class="reflejo-promocion"></div>
+
+        <div class="promocion-contenido">
+
+            <h2>PROMOCIÓN</h2>
+
+            <img
+                src="Yolanda.jpg"
+                alt="Promoción especial"
+            >
+
+            <h3>¡PROMOCIÓN ESPECIAL DEL DÍA!</h3>
+
+            <p>
+                ¡El mejor sabor de la ciudad está a solo unos pasos! 🌮🔥¿Esperando transporte o con antojo de algo delicioso? Pásale a Tacos de Birria "Yolanda", ubicados justo junto a la parada de taxis.   Disfruta de nuestra birria estilo artesanal, suave, bien sazonada y servida con su consomé bien caliente para chopear.  </p>
+
+        </div>
+
+    </section>
+
+    <section class="avisos">
+
+            <h2>📣 INFORMACIÓN DEL DÍA</h2>
+
+            <div id="lista-avisos">
+
+            </div>
+            
+    </section>
+
+    
+    
+</main>
+
+<footer>
+
+    <section class="ayuda-transporte">
+
+        <h2>¿Perdiste el transporte?</h2>
+
+        <p>
+            Si ya pasó tu transporte, aquí puedes encontrar opciones para regresar.
+        </p>
+
+        <div class="contacto-taxi">
+
+            <h3>Taxis de Rosario</h3>
+
+            <p>
+                Puedes comunicarte con un servicio de taxi para continuar el viaje.
+            </p>
+
+            <a href="tel: +52 6941120464"
+            class="boton-taxi">
+            Llamar Taxi
+            </a>
+        </div>
+
+        <div class="contacto-taxi taxi-agua-verde">
+
+            <h3>Taxi de Agua Verde</h3>
+
+            <p>
+                Si necesitas regresar a Agua Verde, puedes comunicarte con tu taxi de confianza.
+            </p>
+
+            <a href="tel: +526941017734"
+            class="boton-taxi">
+            Llamar taxi
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="footer-info">
+
+        <p>Información de Transporte Agua Verde</p>
+
+        <p>Agua Verde ⟺ Rosario </p>
+
+    </div>
+    
+    <div class="creadora">
+
+        <h3>Una idea para Agua Verde</h3>
+
+        <p>
+            Página creada y diseñada por 
+            <strong>Laura Arce Flores</strong>
+        </p>
+
+        <p>Hecho con cariño para nuestra comunidad</p>
+
+        <a href="https://wa.me/+526941195909"
+            class="boton-contacto"
+            target="_blank">
+
+            CONTACTAME CON CONFIANZA
+        
+        </a>
+    </div>
+
+
+</footer>
+
+<script src="app.js"></script>
+
+
+
+</body>
+
+</html>
