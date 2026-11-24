@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 
 <head>
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Transporte Agua Verde</title>
 
-    <link rel="stylesheet"
-    href="style.css">
+    <!-- TIPOGRAFIAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 
-  
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body> 
-
-    
+<body>
 
 <header>
 
-    <h1>  🚍 TRANSPORTE AGUA VERDE 🚍 </h1>
-    
+    <div class="encabezado-contenido">
 
-    <p>AGUA VERDE ↔ ROSARIO</p>
+        <h1>Transporte Agua Verde</h1>
 
-    <div id="reloj"></div>
+        <p class="ruta-titulo">Agua Verde ↔ Rosario</p>
 
-    <button 
-        id="boton-sentido"
-        class="boton-sentido">
-        AGUA VERDE → ROSARIO
-    </button>
+        <div id="reloj"></div>
+
+        <button id="boton-sentido" class="boton-sentido">
+            AGUA VERDE → ROSARIO
+        </button>
+
+        <p class="pista">Toca el botón para cambiar de sentido</p>
+
+    </div>
+
+    <!-- ONDAS ANIMADAS -->
+    <div class="olas" aria-hidden="true">
+
+        <svg class="ola-fondo" viewBox="0 0 2400 100" preserveAspectRatio="none">
+            <path d="M0 50 Q150 0 300 50 T600 50 T900 50 T1200 50 T1500 50 T1800 50 T2100 50 T2400 50 V100 H0 Z"/>
+        </svg>
+
+        <svg class="ola-frente" viewBox="0 0 2400 100" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V100 H0 Z"/>
+        </svg>
+
+    </div>
 
 </header>
 
 <main>
 
-     <section class="mensaje-dia">
+    <section class="mensaje-dia">
 
-        <h2> MENSAJE DEL DÍA</h2>
+        <h2>Mensaje del día</h2>
 
         <div id="mensaje-biblico"></div>
 
@@ -52,265 +64,146 @@
 
     <section class="proximo">
 
-        <h2>¿QUIÉN SIGUE?</h2>
+        <h2>¿Quién sigue?</h2>
 
         <div id="proximo-turno"></div>
 
-
     </section>
 
-    
     <section class="siguientes">
 
-            <h2>PRÓXIMAS SALIDAS</h2>
+        <h2>Próximas salidas</h2>
 
-            <div id="lista-turnos"></div>
+        <div id="lista-turnos"></div>
 
+        <button id="boton-horarios" class="boton-horarios" aria-expanded="false">
+            VER TODOS LOS HORARIOS
+        </button>
 
-            <button
-                id="boton-horarios"
-                class="boton-horarios">
-                VER TODOS LOS HORARIOS
-            </button>
+        <div id="todos-los-horarios" class="todos-los-horarios oculto">
 
-            <div id="todos-los-horarios"
-                class="todos-los-horarios oculto">
+            <h3>Horarios del día</h3>
 
-                <h3>Horarios Del Día</h3>
+            <div id="lista-completa"></div>
 
-                <div id="lista-completa"></div>
-            
-        
-            </div>
-     
+        </div>
+
     </section>
 
     <!-- PARADAS PRINCIPALES -->
 
-<section class="paradas-principales">
+    <section class="paradas-principales">
 
-    
+        <button id="boton-paradas" class="boton-paradas" aria-expanded="false">
+            VER PARADAS PRINCIPALES
+        </button>
 
-    <button
-        id="boton-paradas"
-        class="boton-paradas"
-    >
-        VER PARADAS PRINCIPALES
-    </button>
+        <div id="lista-paradas" class="lista-paradas oculto">
 
+            <div class="parada">
+                <h3>Agua Verde</h3>
+                <p>Calle: C. 20 de Noviembre</p>
+                <p>Referencia: junto al Bar Tecate Olimpica</p>
+            </div>
 
-    <!-- LISTA DE PARADAS -->
+            <div class="parada">
+                <h3>Calle de los Autobuses</h3>
+                <p>Calle: C. José López Portillo</p>
+                <p>Referencia: junto a El Panteón Español</p>
+            </div>
 
-    <div
-        id="lista-paradas"
-        class="lista-paradas oculto"
-    >
+            <div class="parada">
+                <h3>Los Arcos</h3>
+                <p>Calle: Luis Donaldo Colosio Murrieta</p>
+                <p>Referencia: frente a Autotransportes Unidos de Sinaloa (AUS)</p>
+            </div>
 
-        <!-- INICIO AGUA VERDE -->
+            <div class="parada">
+                <h3>IMSS</h3>
+                <p>Calle: Perez Arce</p>
+                <p>Referencia: IMSS de Rosario</p>
+            </div>
 
-        <div class="parada">
+            <div class="parada">
+                <h3>Plazuela Gabriel Leyva</h3>
+                <p>Calle: Angel Flores</p>
+                <p>Referencia: frente al Palacio Municipal</p>
+            </div>
 
-            <h3>🏠 Agua Verde</h3>
+            <div class="parada">
+                <h3>SuperAmigo</h3>
+                <p>Calle: C. Teófilo Norís</p>
+                <p>Referencia: frente a la Coppel</p>
+                <strong>Una de las paradas con mayor movimiento</strong>
+            </div>
 
-            <p>
-                📍 Calle: C. 20 de Noviembre
-            </p>
+            <div class="parada">
+                <h3>La Chalata</h3>
+                <p>Calle: C. Mineros</p>
+                <p>Referencia: frente a Productos Secos al Mayoreo "Emanuel"</p>
+            </div>
 
-            <p>
-                📝 Referencia:
-                Junto al Bar Tecate Olimpica
-            </p>
-
-        </div>
-
-
-        <!-- CALLE DE LOS AUTOBUSES -->
-
-        <div class="parada">
-
-            <h3>🚌 Calle de los Autobuses</h3>
-
-            <p>
-                📍 Calle: C. José López Portillo
-            </p>
-
-            <p>
-                📝 Referencia:
-                Junto a El Panteón Español
-            </p>
-
-        </div>
-
-
-        <!-- LOS ARCOS -->
-
-        <div class="parada">
-
-            <h3>🏹 Los Arcos</h3>
-
-            <p>
-                📍 Calle: Luis Donaldo Colosio Murrieta
-            </p>
-
-            <p>
-                📝 Referencia:
-                Frente a Autotransportes Unidos de Sinaloa (AUS) 
-            </p>
+            <div class="parada">
+                <h3>OXXO</h3>
+                <p>Calle: Agustín Lara</p>
+                <p>Referencia: frente al Oxxo</p>
+                <strong>Aquí espera más tiempo el último camión</strong>
+            </div>
 
         </div>
 
+    </section>
 
-        <!-- IMSS -->
+    <section class="transporte-externo">
 
-        <div class="parada">
+        <h2>Transporte de Los Pozos</h2>
 
-            <h3>🏥 IMSS</h3>
+        <div id="transporte-externo"></div>
 
-            <p>
-                📍 Calle: Perez Arce
-            </p>
+    </section>
 
-            <p>
-                📝 Referencia:
-                IMSS de Rosario
-            </p>
+    <section class="lugares">
 
-        </div>
+        <h2>Visita estos lugares en Agua Verde</h2>
 
+        <div id="lugar-actual" class="lugar"></div>
 
-        <!-- PLAZUELA -->
+        <div id="lugar-puntos" class="lugar-puntos"></div>
 
-        <div class="parada">
+        <div class="lugar-progreso" aria-hidden="true"><span id="lugar-barra"></span></div>
 
-            <h3>⛲ Plazuela Gabriel Leyva</h3>
-
-            <p>
-                📍 Calle: Angel Flores
-            </p>
-
-            <p>
-                📝 Referencia:
-                Frente al Palacio Municipal
-            </p>
-
-        </div>
-
-
-        <!-- SUPERAMIGO -->
-
-        <div class="parada">
-
-            <h3>⭐ SuperAmigo</h3>
-
-            <p>
-                📍 Calle: C. Teófilo Norís
-            </p>
-
-            <p>
-                📝 Referencia:
-                Frente a la Coppel
-            </p>
-
-            <strong>
-                ⭐ Una de las paradas con mayor movimiento
-            </strong>
-
-        </div>
-
-
-        <!-- OTRA PARADA -->
-
-        <div class="parada">
-
-            <h3>📍 Parada: La Chalata</h3>
-
-            <p>
-                📍 Calle: C. Mineros
-            </p>
-
-            <p>
-                📝 Referencia:
-                Frente a Productos Secos al Mayoreo "Emanuel"
-            </p>
-
-        </div>
-
-
-        <!-- OXXO -->
-
-        <div class="parada">
-
-            <h3>🏪 OXXO</h3>
-
-            <p>
-                📍 Calle: Agustín Lara
-            </p>
-
-            <p>
-                📝 Referencia:
-                Frente al Oxxo
-            </p>
-
-            <strong>
-                🕐 Aquí espera más tiempo el último camión
-            </strong>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-        <section class="transporte-externo">
-
-            <h2>TRANSPORTE DE LOS POZOS</h2>
-
-            <div id="transporte-externo"></div>
-
-        </section>
-   
-
-    <section class="promocion">
-
-        <div class="linea-promocion linea-1"></div>
-        <div class="linea-promocion linea-2"></div>
-        <div class="linea-promocion linea-3"></div>
-        <div class="linea-promocion linea-4"></div>
-
-        <div class="reflejo-promocion"></div>
-
-        <div class="promocion-contenido">
-
-            <h2>PROMOCIÓN</h2>
-
-            <img
-                src="Yolanda.jpg"
-                alt="Promoción especial"
-            >
-
-            <h3>¡PROMOCIÓN ESPECIAL DEL DÍA!</h3>
-
-            <p>
-                ¡El mejor sabor de Agua Verde está a solo unos pasos! 🌮🔥¿Esperando transporte o con antojo de algo delicioso? Pásale a Tacos de Birria "Yolanda", ubicados justo junto a la parada de taxis.   Disfruta de nuestra birria estilo artesanal, suave, bien sazonada y servida con su consomé bien caliente para chopear.  </p>
-
-        </div>
+        <p class="lugar-nota">Cambia cada 20 minutos</p>
 
     </section>
 
     <section class="avisos">
 
-            <h2>📣 INFORMACIÓN DEL DÍA</h2>
+        <h2>Información del día</h2>
 
-            <div id="lista-avisos">
+        <div id="lista-avisos"></div>
 
-            </div>
-            
     </section>
 
-    
-    
+    <section class="telefonos">
+
+        <h2>Teléfonos importantes</h2>
+
+        <div id="lista-telefonos"></div>
+
+    </section>
+
+    <section class="compartir">
+
+        <h2>Comparte esta página</h2>
+
+        <p>Mándala a tu familia y a los grupos de la comunidad.</p>
+
+        <button id="boton-compartir" class="boton-compartir">
+            COMPARTIR POR WHATSAPP
+        </button>
+
+    </section>
+
 </main>
 
 <footer>
@@ -319,36 +212,25 @@
 
         <h2>¿Perdiste el transporte?</h2>
 
-        <p>
-            Si ya pasó tu transporte, aquí puedes encontrar opciones para regresar.
-        </p>
+        <p>Si ya pasó tu transporte, aquí puedes encontrar opciones para regresar.</p>
 
         <div class="contacto-taxi">
 
             <h3>Taxis de Rosario</h3>
 
-            <p>
-                Puedes comunicarte con un servicio de taxi para continuar el viaje.
-            </p>
+            <p>Puedes comunicarte con un servicio de taxi para continuar el viaje.</p>
 
-            <a href="tel: +52 6941120464"
-            class="boton-taxi">
-            Llamar Taxi
-            </a>
+            <a href="tel:+526941120464" class="boton-taxi">Llamar taxi</a>
+
         </div>
 
         <div class="contacto-taxi taxi-agua-verde">
 
             <h3>Taxi de Agua Verde</h3>
 
-            <p>
-                Si necesitas regresar a Agua Verde, puedes comunicarte con tu taxi de confianza.
-            </p>
+            <p>Si necesitas regresar a Agua Verde, puedes comunicarte con tu taxi de confianza.</p>
 
-            <a href="tel: +526941017734"
-            class="boton-taxi">
-            Llamar taxi
-            </a>
+            <a href="tel:+526941017734" class="boton-taxi">Llamar taxi</a>
 
         </div>
 
@@ -358,36 +240,27 @@
 
         <p>Información de Transporte Agua Verde</p>
 
-        <p>Agua Verde ⟺ Rosario </p>
+        <p>Agua Verde ⟺ Rosario</p>
 
     </div>
-    
+
     <div class="creadora">
 
         <h3>Una idea para Agua Verde</h3>
 
-        <p>
-            Página creada y diseñada por 
-            <strong>Laura Arce Flores</strong>
-        </p>
+        <p>Página creada y diseñada por <strong>Laura Arce Flores</strong></p>
 
         <p>Hecho con cariño para nuestra comunidad</p>
 
-        <a href="https://wa.me/+526941195909"
-            class="boton-contacto"
-            target="_blank">
-
-            CONTACTAME CON CONFIANZA
-        
+        <a href="https://wa.me/+526941195909" class="boton-contacto" target="_blank" rel="noopener">
+            CONTÁCTAME CON CONFIANZA
         </a>
-    </div>
 
+    </div>
 
 </footer>
 
 <script src="app.js"></script>
-
-
 
 </body>
 
